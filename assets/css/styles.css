@@ -30,11 +30,13 @@ a:hover {
 
 .image-hover-container {
   width: 465px;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
   background-image: url('../img/Starbucks Drink.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 }
+
 
 
 
