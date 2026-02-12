@@ -28,7 +28,14 @@ a:hover {
 	text-decoration: underline;
 }
 
-.backgroundimage: hover {
-	background-image: img src="assets/img/10 dollar bill.png" alt="" width="465";
-	cursor: crosshair;
+.image-hover-container {
+  width: 200px;
+  height: 200px;
+  background-image: url('Starbucks Drink.png');
+  background-size: cover;
 }
+
+.image-hover-container:hover {
+  background-image: url('10 dollar bill');
+}
+
