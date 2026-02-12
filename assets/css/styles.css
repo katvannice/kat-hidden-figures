@@ -29,14 +29,14 @@ a:hover {
 }
 
 .image-hover-container {
-  width: 200px;
-  height: 200px;
-  background-image: url('starbucks-drink.png');
+  width: 465px;
+  height: 300px;
+  background-image: url('../img/Starbucks Drink.png');
   background-size: cover;
   background-position: center;
 }
 
 .image-hover-container:hover {
-  background-image: url('ten-dollar-bill.png');
+  background-image: url('../img/10 dollar bill.png');
 }
 
