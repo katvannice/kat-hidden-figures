@@ -4,42 +4,28 @@
 	font-family: Lato, Open Sans, sans-serif;
 }
 
+/* styles.css */
+
 body {
-	background-color: #006241;
-}
-
-.backgroundimage {
-	width: 465px;
-	margin: 50px auto;
-	text-align: center;
-}
-
-h1 {
+  margin: 0;
+  background-color: #006241;
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-	text-align: cetner;
-	color: white;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
+/* Container */
 .image-hover-container {
   position: relative;
   width: 465px;
   margin: 50px auto;
 }
 
+/* Images */
 .image-hover-container img {
   width: 100%;
   display: block;
 }
 
+/* Hover image stacked on top */
 .hover-img {
   position: absolute;
   top: 0;
@@ -47,25 +33,28 @@ a:hover {
   opacity: 0;
 }
 
+/* Instant swap */
 .image-hover-container:hover .hover-img {
   opacity: 1;
 }
 
+/* Overlay text */
 .overlay-text {
   position: absolute;
   bottom: 15px;
   left: 15px;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
   font-size: 28px;
   font-weight: 700;
   color: white;
 }
 
+/* Hide alternate text */
 .hover-text {
   display: none;
 }
 
+/* Swap text instantly */
 .image-hover-container:hover .default-text {
   display: none;
 }
@@ -73,17 +62,7 @@ a:hover {
 .image-hover-container:hover .hover-text {
   display: inline;
 }
-tainer:hover .overlay-text {
-  font-size: 24px;
-}
 
-.image-hover-container:hover .overlay-text::after {
-  content: "Pay your study rent";
-}
-
-.image-hover-container:hover .overlay-text {
-  color: transparent;
-}
 
 .image-hover-container:hover .overlay-text::after {
   color: white;
