@@ -8,18 +8,25 @@ body {
 	background-color: #006241;
 }
 
-.container {
+.backgroundimage {
 	width: 500px;
 	margin: 50px auto;
 	text-align: center;
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-	font-color: white;
+	font-family: "Open Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	font-variation-settings:
+	"wdth" 100;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.backgroundimage: hover {
+	background-image: url(../img/
 }
