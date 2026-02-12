@@ -21,6 +21,7 @@ h1 {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+	color: white;
 }
 
 a:hover {
@@ -28,6 +29,6 @@ a:hover {
 }
 
 .backgroundimage: hover {
-	background-image: url(../img/10 dollar bill.png);
+	background-image: img src="assets/img/10 dollar bill.png" alt="" width="465";
 	cursor: crosshair;
 }
