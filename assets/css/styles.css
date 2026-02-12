@@ -81,7 +81,6 @@ tainer:hover .overlay-text {
   content: "Pay your study rent";
 }
 
-/* Hide original text on hover */
 .image-hover-container:hover .overlay-text {
   color: transparent;
 }
