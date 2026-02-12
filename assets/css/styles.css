@@ -15,12 +15,12 @@ body {
 }
 
 h1 {
-	font-family: "Open Sans", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 700;
-	font-style: normal;
-	font-variation-settings:
-	"wdth" 100;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 a:hover {
@@ -28,5 +28,6 @@ a:hover {
 }
 
 .backgroundimage: hover {
-	background-image: url(../img/
+	background-image: url(../img/10 dollar bill.png);
+	cursor: crosshair;
 }
