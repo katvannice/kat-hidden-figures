@@ -4,28 +4,26 @@
 	font-family: Lato, Open Sans, sans-serif;
 }
 
-/* styles.css */
-
 body {
   margin: 0;
   background-color: #006241;
   font-family: "Open Sans", sans-serif;
 }
 
-/* Container */
 .image-hover-container {
-  position: relative;
   width: 465px;
-  margin: 50px auto;
+  height: 300px; /* adjust if needed */
+  background-image: url('../img/Starbucks Drink.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* Images */
 .image-hover-container img {
   width: 100%;
   display: block;
 }
 
-/* Hover image stacked on top */
 .hover-img {
   position: absolute;
   top: 0;
@@ -33,12 +31,10 @@ body {
   opacity: 0;
 }
 
-/* Instant swap */
 .image-hover-container:hover .hover-img {
   opacity: 1;
 }
 
-/* Overlay text */
 .overlay-text {
   position: absolute;
   bottom: 15px;
@@ -49,12 +45,10 @@ body {
   color: white;
 }
 
-/* Hide alternate text */
 .hover-text {
   display: none;
 }
 
-/* Swap text instantly */
 .image-hover-container:hover .default-text {
   display: none;
 }
