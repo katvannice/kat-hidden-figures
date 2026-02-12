@@ -30,16 +30,8 @@ a:hover {
 }
 
 .image-hover-container {
+  position: relative;
   width: 465px;
-  aspect-ratio: 1 / 1;
-  background-image: url('../img/Starbucks Drink.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.image-hover-container:hover {
-  background-image: url('../img/10 dollar bill.png');
 }
 
 .overlay-text {
@@ -53,15 +45,25 @@ a:hover {
   color: white;
 }
 
-.hover-text {
-  display: none;
+/* Hide alternate text using ::after */
+.overlay-text::after {
+  content: "";
 }
 
-.image-hover-container:hover .default-text {
-  display: none;
+/* Change text on hover */
+.image-hover-container:hover .overlay-text {
+  font-size: 24px;
 }
 
-.image-hover-container:hover .hover-text {
-  display: inline;
+.image-hover-container:hover .overlay-text::after {
+  content: "Pay your study rent";
 }
 
+/* Hide original text on hover */
+.image-hover-container:hover .overlay-text {
+  color: transparent;
+}
+
+.image-hover-container:hover .overlay-text::after {
+  color: white;
+}
