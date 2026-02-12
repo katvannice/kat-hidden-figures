@@ -25,8 +25,6 @@ h1 {
 	color: white;
 }
 
-}
-
 a:hover {
 	text-decoration: underline;
 }
@@ -40,10 +38,30 @@ a:hover {
   background-position: center;
 }
 
-
-
-
 .image-hover-container:hover {
   background-image: url('../img/10 dollar bill.png');
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.hover-text {
+  display: none;
+}
+
+.image-hover-container:hover .default-text {
+  display: none;
+}
+
+.image-hover-container:hover .hover-text {
+  display: inline;
 }
 
