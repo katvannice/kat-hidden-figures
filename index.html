@@ -1,20 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Starbucks</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./assets/css/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidden Figures: A Technocultural Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .landing-hero {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
 
-<div class="background-image">
-	<img src="assets/Starbucks Drink.png" alt="">>
-	<h1>A great place to study</h1>
-	</div>
-	<script src="./assets/js/main.js"></script>
-	
+    .hero-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      object-position: top;
+      filter: sepia(50%) contrast(1.1) brightness(0.85);
+      border: 1px solid var(--tan);
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(transparent, rgba(28, 16, 8, 0.82));
+    }
+
+    .hero-name {
+      font-family: var(--font-caption);
+      font-style: italic;
+      font-size: 0.82rem;
+      color: var(--parchment);
+      letter-spacing: 0.08em;
+      opacity: 0.85;
+    }
+
+    .subtitle {
+      font-family: var(--font-caption);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--tan);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .redact-line {
+      margin-bottom: 1rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--ink);
+    }
+
+    .reveal-prompt {
+      font-family: var(--font-caption);
+      font-size: 0.78rem;
+      color: var(--tan);
+      font-style: italic;
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .stamp {
+      display: inline-block;
+      border: 2px solid var(--red);
+      color: var(--red);
+      font-family: var(--font-caption);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      transform: rotate(-2deg);
+      opacity: 0.75;
+      margin-bottom: 1.5rem;
+    }
+    </style>
+  </head>
+<body>
+  <div class="page">
+
+    <div class="site-label fade-in" style="color:black;">Hidden Figures — Technocultural Analysis</div>
+
+    <div class="landing-hero fade-in fade-in-delay-1">
+      <img
+        src="assets/img/katherine-johnson.jpg"
+        alt="Katherine Johnson at NASA"
+        class="hero-img"
+      />
+      <div class="hero-overlay">
+        <p class="hero-name">Katherine Johnson, NASA Langley Research Center</p>
+      </div>
+    </div>
+
+    <div class="stamp fade-in fade-in-delay-2">Archival Record</div>
+
+    <h1 class="fade-in fade-in-delay-2">Hidden Figures</h1>
+    <p class="subtitle fade-in fade-in-delay-2" style="color:brown">A Technocultural Analysis &nbsp;·&nbsp; Kaitlyn Van Nice &nbsp;·&nbsp; Introduction to Technoculture</p>
+
+    <div class="divider fade-in fade-in-delay-3"></div>
+
+    <div class="fade-in fade-in-delay-3">
+      <p class="redact-line">
+        History has had an interesting habit of crediting those in the spotlight
+        while pushing the <span class="redacted" id="r1">actual support system</span> away.
+      </p>
+      <p class="redact-line">
+        Three black women held the space program together.
+        Their names were<span class="redacted" id="r2">Katherine Johnson</span>,
+        <span class="redacted" id="r3">Dorothy Vaughan</span>, and
+        <span class="redacted" id="r4">Mary Jackson</span>.
+      </p>
+      <p class="redact-line">
+        For decades, history <span class="redacted" id="r5">almost forgot them entirely</span>.
+      </p>
+
+      <p class="reveal-prompt">Click to uncover what was hidden.</p>
+      <button class="nav-btn" id="revealBtn" style="margin-top:1.5rem;">Uncover</button>
+    </div>
+
+    <div id="continueWrap" style="display:none;">
+      <a href="intro.html" class="nav-btn">Begin &rarr;</a>
+      <p class="progress" style="color:black;">Page 1 of 8</p>
+    </div>
+
+  </div>
+
+  <script>
+    const redacted = document.querySelectorAll('.redacted');
+    const revealBtn = document.getElementById('revealBtn');
+    const continueWrap = document.getElementById('continueWrap');
+    let revealed = false;
+
+    revealBtn.addEventListener('click', () => {
+      if (!revealed) {
+        redacted.forEach((el, i) => {
+          setTimeout(() => el.classList.add('revealed'), i * 350);
+        });
+        setTimeout(() => {
+          revealBtn.style.display = 'none';
+          continueWrap.style.display = 'block';
+          document.querySelector('.reveal-prompt').style.display = 'none';
+        }, redacted.length * 350 + 400);
+        revealed = true;
+      }
+    });
+  </script>
 </body>
 </html>
